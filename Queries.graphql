@@ -1,0 +1,59 @@
+Récupération de toutes les interventions effectuées par un employé spécifié avec 
+les immeubles associés à ces interventions incluant les détails 
+(Table BuildingDetails) associés à ces immeubles ; 
+
+{
+  Fact(employeeid: $id) {
+    id
+    employee {
+      id
+      firstname
+      lastname
+    }
+    building {
+      id
+      building_administrator_full_name
+      building_administrator_email
+      building_administrator_phone
+      building_technical_contact_full_name
+      building_technical_contact_email
+      building_technical_contact_phone
+    }
+    start_date_and_time_if_intervention
+    end_date_and_time_if_intervention
+  }
+}
+
+
+Récupération de l’information du client et de la liste des interventions qui se sont 
+déroulées pour un immeuble spécifique:
+
+{
+  FactBuilding(buildingid: $id){
+    id
+
+    building {
+      id
+      building_administrator_full_name
+      building_administrator_email
+      building_administrator_phone
+      building_technical_contact_full_name
+      building_technical_contact_email
+      building_technical_contact_phone
+      
+      customer{
+    company_name
+    company_contact_name
+    company_contact_email
+    company_contact_phone
+    company_description
+    service_technical_authority_full_name
+    service_technical_authority_email
+    service_technical_authority_phone
+  }
+    }
+    start_date_and_time_if_intervention
+    end_date_and_time_if_intervention
+  }
+}
+
