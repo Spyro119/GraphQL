@@ -10,7 +10,7 @@
     "graphql": "^15.0.0",
     "graphql-iso-date": "^3.6.1",
     "graphql-tools": "^4.0.7",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "mysql2": "^2.1.0",
     "pg": "^8.0.0",
     "pg-promise": "^10.5.0",
